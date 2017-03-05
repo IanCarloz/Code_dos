@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Practica Vue</title>
+</head>
+<body>
+
+  <h1> Hola VueJS </h1>
+
+  <div id="app">
+    <input type="text" v-model="message">
+    {{ capitalizar(message) }}
+
+    <pre>
+      {{ $data | json }}
+    </pre>
+    
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.js"></script>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'empezando con VueJS'
+      },
+      methods: {
+        capitalizar: function(valor){
+          return valor.toUpperCase();
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
